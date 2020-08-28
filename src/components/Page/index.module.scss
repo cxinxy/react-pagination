@@ -1,0 +1,41 @@
+.pageContainer:after {
+  content: '.';
+  display: block;
+  height: 0;
+  overflow: hidden;
+  clear: both;
+}
+
+.pageContainer {
+  zoom: 1;
+  display: inline-block;
+
+  li {
+    list-style: none;
+    float: left;
+    cursor: pointer;
+    padding: 0 10px;
+    height: 28px;
+    line-height: 28px;
+    margin-right: 8px;
+    text-align: center;
+    border: 1px solid #e4e4e4;
+    border-radius: 6px;
+
+    &:last-child {
+      margin-right: 0px;
+    }
+  }
+
+  /* 当前页样式 */
+  .activePage {
+    color: #fff;
+    background: #ff4823;
+  }
+
+  /* 没有上一页和下一页时样式 */
+  .nomore {
+    color: #b5b5b5;
+    cursor: default !important;
+  }
+}
